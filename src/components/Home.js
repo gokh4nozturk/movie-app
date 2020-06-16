@@ -1,11 +1,14 @@
 import React from "react";
 import Films from "./Films";
+
+import Style from "../assets/css/App.css";
+
 function Home() {
   return (
-    <div>
+    <main style={Style}>
       Home
       <Films />
-    </div>
+    </main>
   );
 }
 export default Home;

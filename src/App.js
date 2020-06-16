@@ -6,10 +6,12 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
 
+import Style from "./assets/css/App.css";
+
 function App() {
   return (
     <Router>
-      <div>
+      <div style={Style}>
         <Navigation />
         <Switch>
           <Route path="/" exact component={Home} />
