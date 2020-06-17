@@ -29,6 +29,7 @@ function Films() {
               />
               <div className="card-body">
                 <p className="card-text">{item.title}</p>
+                <button className="btn btn-primary">Git</button>
               </div>
             </div>
           );
