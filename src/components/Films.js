@@ -26,7 +26,7 @@ function Films() {
               <img
                 alt="asdfaf"
                 src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
-              ></img>
+              />
               <div className="card-body">
                 <p className="card-text">{item.title}</p>
               </div>

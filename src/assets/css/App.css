@@ -96,13 +96,25 @@ li {
 
 .films-popular {
   display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .card {
-  width: 12rem;
+  flex: 0 0 200px;
+  display: inline-block;
   color: #0f1115;
+}
+
+.card img {
+  height: 300px;
+  width: 100%;
+}
+
+.card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* footer part */
