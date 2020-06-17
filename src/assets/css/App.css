@@ -94,6 +94,17 @@ li {
   padding: 2%;
 }
 
+.films-popular {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.card {
+  width: 12rem;
+  color: #0f1115;
+}
+
 /* footer part */
 
 footer {
