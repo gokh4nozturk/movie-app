@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
+import Film from "./Film";
+
 function Films() {
   const [popular, setPopular] = useState([]);
 
@@ -18,22 +20,45 @@ function Films() {
 
   return (
     <div>
-      <h1>Popular</h1>
-      <div className="films-popular">
-        {popular.map((item) => {
-          return (
-            <div key={item.id} className="card">
-              <img
-                alt="asdfaf"
-                src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
-              />
-              <div className="card-body">
-                <p className="card-text">{item.title}</p>
-                <button className="btn btn-primary">Git</button>
-              </div>
-            </div>
-          );
-        })}
+      <div className="popular-movies">
+        <h4>Now Playing</h4>
+        <div className="films-popular">
+          {popular.map((item) => (
+            <Film key={item.id} {...item} />
+          ))}
+        </div>
+      </div>
+      <div className="popular-movies">
+        <h4>Popular Movies</h4>
+        <div className="films-popular">
+          {popular.map((item) => (
+            <Film key={item.id} {...item} />
+          ))}
+        </div>
+      </div>
+      <div className="popular-movies">
+        <h4>Popular Movies</h4>
+        <div className="films-popular">
+          {popular.map((item) => (
+            <Film key={item.id} {...item} />
+          ))}
+        </div>
+      </div>
+      <div className="popular-movies">
+        <h4>Popular Movies</h4>
+        <div className="films-popular">
+          {popular.map((item) => (
+            <Film key={item.id} {...item} />
+          ))}
+        </div>
+      </div>
+      <div className="popular-movies">
+        <h4>Popular Movies</h4>
+        <div className="films-popular">
+          {popular.map((item) => (
+            <Film key={item.id} {...item} />
+          ))}
+        </div>
       </div>
     </div>
   );

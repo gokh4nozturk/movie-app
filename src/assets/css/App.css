@@ -98,6 +98,11 @@ li {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.popular-movies:nth-of-type(n + 2) {
+  margin-top: 25px;
 }
 
 .card {
@@ -107,7 +112,7 @@ li {
 }
 
 .card:nth-of-type(n + 2) {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .card img {
@@ -116,9 +121,28 @@ li {
 }
 
 .card-text {
+  color: white;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.card-img-text {
+  position: absolute;
+  top: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25em;
+}
+
+.genres-links {
+  text-decoration: none;
+  color: white;
+}
+
+.genres-links:hover {
+  color: yellow;
+  text-decoration: none;
 }
 
 /* footer part */

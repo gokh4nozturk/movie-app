@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Axios from "axios";
 
@@ -17,9 +18,11 @@ function SidebarLeft() {
   return (
     <div>
       <h3>Genres</h3>
-      {genres.map((item) => {
-        return <p key={item.id}>{item.name}</p>;
-      })}
+      {genres.map((item) => (
+        <Link to={item.id} key={item.id} className="genres-links">
+          <p>{item.name}</p>
+        </Link>
+      ))}
     </div>
   );
 }
