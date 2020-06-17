@@ -12,6 +12,7 @@ function Navigation() {
       </div>
       <div className="part2">
         <input
+          autoFocus
           type="text"
           className="searchBox"
           placeholder="Search any movies or tv shows"
