@@ -6,19 +6,15 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
 
-import Style from "./assets/css/App.css";
-
 function App() {
   return (
     <Router>
-      <div style={Style}>
-        <Navigation />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-        </Switch>
-        <Footer />
-      </div>
+      <Navigation />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+      </Switch>
+      <Footer />
     </Router>
   );
 }
