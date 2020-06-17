@@ -132,7 +132,10 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 1.25em;
+  padding-top: 1.15em;
+  padding-left: 1.15em;
+  padding-right: 1.15em;
+  padding-bottom: 0.1em;
 }
 
 .genres-links {

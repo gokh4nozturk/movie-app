@@ -6,7 +6,7 @@ function Film(item) {
     <Link to={item.id} className="card">
       <div className="card">
         <img
-          alt="asdfaf"
+          alt="..."
           src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
         />
         <div className="card-img-text">
