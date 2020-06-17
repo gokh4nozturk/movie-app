@@ -35,6 +35,8 @@
     ]
   },
   "devDependencies": {
-    "@svgr/cli": "^5.4.0"
+    "@svgr/cli": "^5.4.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
   }
 }
