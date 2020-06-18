@@ -1,0 +1,44 @@
+@import "../abstracts/variables";
+.nav {
+  background-color: $primary-color;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 20px;
+}
+.part1 {
+  grid-column: 1/2;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.part2 {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+}
+.searchBox {
+  background: $secondary-color;
+  color: white;
+  width: 60%;
+  height: 60px;
+  font-size: 25px;
+  border: 0px;
+  padding: 30px;
+  border-radius: 30px;
+}
+.nav-links {
+  text-decoration: none;
+  color: #707070;
+  margin-left: 10px;
+}
+
+.nav-links:hover {
+  color: white;
+}

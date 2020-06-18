@@ -1,0 +1,23 @@
+li {
+  list-style: none;
+}
+.sidebar-left {
+  grid-column: 1/2;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.sidebar-right {
+  background-color: #1d1c24;
+  width: 25%;
+  padding: 2%;
+}
+.genres-links {
+  text-decoration: none;
+  color: white;
+}
+
+.genres-links:hover {
+  color: yellow;
+  text-decoration: none;
+}
