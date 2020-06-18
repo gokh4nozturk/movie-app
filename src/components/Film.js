@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Film(item) {
   return (
-    <Link to={item.id} className="card">
+    <Link to={`/${item.id}`} className="card">
       <div className="card">
         <img
           alt="..."

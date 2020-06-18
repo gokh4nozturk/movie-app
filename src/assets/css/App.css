@@ -100,7 +100,16 @@ main {
   padding-top: 1.15em;
   padding-left: 1.15em;
   padding-right: 1.15em;
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.4em;
+  -webkit-box-shadow: inset 0px -25px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px -25px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -25px 5px 0px rgba(0, 0, 0, 0.75); }
+
+.film-detail {
+  background-color: #1d1c24;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 0px -2px 2px 8px rgba(90, 16, 16, 0.75); }
 
 .sidebars {
   font: Segoe UI; }

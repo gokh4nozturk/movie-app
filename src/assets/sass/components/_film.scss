@@ -1,33 +1,36 @@
 .card {
-    flex: 0 0 200px;
-    display: inline-block;
-    color: #0f1115;
-    height: 303px;
-  }
-  
-  .card:nth-of-type(n + 2) {
-    margin-left: 10px;
-  }
-  
-  .card img {
-    height: 300px;
-    width: 100%;
-  }
-  
-  .card-text {
-    color: white;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .card-img-text {
-    position: absolute;
-    top: 1;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-top: 1.15em;
-    padding-left: 1.15em;
-    padding-right: 1.15em;
-    padding-bottom: 0.4em;
-  }
+  flex: 0 0 200px;
+  display: inline-block;
+  color: #0f1115;
+  height: 303px;
+}
+
+.card:nth-of-type(n + 2) {
+  margin-left: 10px;
+}
+
+.card img {
+  height: 300px;
+  width: 100%;
+}
+
+.card-text {
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-img-text {
+  position: absolute;
+  top: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 1.15em;
+  padding-left: 1.15em;
+  padding-right: 1.15em;
+  padding-bottom: 0.4em;
+  -webkit-box-shadow: inset 0px -25px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px -25px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -25px 5px 0px rgba(0, 0, 0, 0.75);
+}
