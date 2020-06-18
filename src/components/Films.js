@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Axios from "axios";
 
 import Film from "./Film";
@@ -38,7 +39,6 @@ function Films() {
       <div className="films-slider">
         <div className="title-see-more">
           <h5 className="titles">Now Playing</h5>
-          <p className="see-more">See More</p>
         </div>
         <div className="fetched-film">
           {now_playing.map((item) => (
@@ -49,7 +49,6 @@ function Films() {
       <div className="films-slider">
         <div className="title-see-more">
           <h5 className="titles">Popular Movies</h5>
-          <p className="see-more">See More</p>
         </div>
         <div className="fetched-film">
           {popular.map((item) => (
@@ -60,7 +59,6 @@ function Films() {
       <div className="films-slider">
         <div className="title-see-more">
           <h5 className="titles">Upcoming</h5>
-          <p className="see-more">See More</p>
         </div>
         <div className="fetched-film">
           {upcoming.map((item) => (
