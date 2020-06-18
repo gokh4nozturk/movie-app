@@ -20,41 +20,56 @@ function Films() {
 
   return (
     <div>
-      <div className="popular-movies">
-        <h4>Now Playing</h4>
-        <div className="films-popular">
+      <div className="films-slider">
+        <div className="title-see-more">
+          <h5 className="titles">Popular Movies</h5>
+          <p className="see-more">See More</p>
+        </div>
+        <div className="fetched-film">
           {popular.map((item) => (
             <Film key={item.id} {...item} />
           ))}
         </div>
       </div>
-      <div className="popular-movies">
-        <h4>Popular Movies</h4>
-        <div className="films-popular">
+      <div className="films-slider">
+        <div className="title-see-more">
+          <h5 className="titles">Now Playing</h5>
+          <p className="see-more">See More</p>
+        </div>
+        <div className="fetched-film">
           {popular.map((item) => (
             <Film key={item.id} {...item} />
           ))}
         </div>
       </div>
-      <div className="popular-movies">
-        <h4>Popular Movies</h4>
-        <div className="films-popular">
+      <div className="films-slider">
+        <div className="title-see-more">
+          <h5 className="titles">Now Playing</h5>
+          <p className="see-more">See More</p>
+        </div>
+        <div className="fetched-film">
           {popular.map((item) => (
             <Film key={item.id} {...item} />
           ))}
         </div>
       </div>
-      <div className="popular-movies">
-        <h4>Popular Movies</h4>
-        <div className="films-popular">
+      <div className="films-slider">
+        <div className="title-see-more">
+          <h5 className="titles">Now Playing</h5>
+          <p className="see-more">See More</p>
+        </div>
+        <div className="fetched-film">
           {popular.map((item) => (
             <Film key={item.id} {...item} />
           ))}
         </div>
       </div>
-      <div className="popular-movies">
-        <h4>Popular Movies</h4>
-        <div className="films-popular">
+      <div className="films-slider">
+        <div className="title-see-more">
+          <h5 className="titles">Now Playing</h5>
+          <p className="see-more">See More</p>
+        </div>
+        <div className="fetched-film">
           {popular.map((item) => (
             <Film key={item.id} {...item} />
           ))}

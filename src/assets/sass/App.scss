@@ -1,5 +1,4 @@
 @import "abstracts/variables";
-@import "base/reset";
 @import "layout/navigation";
 @import "pages/home";
 @import "pages/about";
@@ -9,6 +8,5 @@
 body {
   background-color: $primary-color;
   color: white;
-  font: 100% $font-stack;
-  font-size: 16px;
+  font: $font-stack;
 }

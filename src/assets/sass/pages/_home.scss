@@ -25,14 +25,14 @@ main {
   padding: 2%;
 }
 
-.films-popular {
+.fetched-film {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   padding-bottom: 10px;
 }
 
-.popular-movies:nth-of-type(n + 2) {
+.films-slider:nth-of-type(n + 2) {
   margin-top: 25px;
 }
 
@@ -68,4 +68,9 @@ main {
   padding-left: 1.15em;
   padding-right: 1.15em;
   padding-bottom: 0.4em;
+}
+
+.title-see-more {
+  display: flex;
+  justify-content: space-between;
 }
