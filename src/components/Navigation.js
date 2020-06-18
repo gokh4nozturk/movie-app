@@ -20,6 +20,9 @@ function Navigation() {
         <Link to="/about" className="nav-links">
           <h3>About</h3>
         </Link>
+        <Link to="/" className="nav-links">
+          <h3>Movies</h3>
+        </Link>
       </div>
     </nav>
   );
