@@ -18,10 +18,6 @@ main {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-}
-
-.home-films {
-  width: 75%;
   padding: 2%;
 }
 
@@ -34,40 +30,6 @@ main {
 
 .films-slider:nth-of-type(n + 2) {
   margin-top: 25px;
-}
-
-.card {
-  flex: 0 0 200px;
-  display: inline-block;
-  color: #0f1115;
-  height: 303px;
-}
-
-.card:nth-of-type(n + 2) {
-  margin-left: 10px;
-}
-
-.card img {
-  height: 300px;
-  width: 100%;
-}
-
-.card-text {
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.card-img-text {
-  position: absolute;
-  top: 1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding-top: 1.15em;
-  padding-left: 1.15em;
-  padding-right: 1.15em;
-  padding-bottom: 0.4em;
 }
 
 .title-see-more {

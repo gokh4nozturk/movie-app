@@ -1,6 +1,5 @@
 import React from "react";
 import SidebarLeft from "./SidebarLeft";
-import SidebarRight from "./SidebarRight";
 import Films from "./Films";
 
 function Home() {
@@ -10,12 +9,7 @@ function Home() {
         <SidebarLeft />
       </div>
       <div className="view">
-        <div className="home-films">
-          <Films />
-        </div>
-        <div className="sidebar-right">
-          <SidebarRight />
-        </div>
+        <Films />
       </div>
     </main>
   );
