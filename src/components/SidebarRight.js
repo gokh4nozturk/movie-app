@@ -2,7 +2,7 @@ import React from "react";
 
 function SidebarRight() {
   return (
-    <div>
+    <div className="sidebars">
       <h3>Kategoriler</h3>
       <ul>
         <li>Kategori 1</li>

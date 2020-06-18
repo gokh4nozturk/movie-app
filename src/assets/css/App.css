@@ -169,7 +169,6 @@ table {
 .nav-links:hover {
   color: white; }
 
-/* home/main part */
 main {
   width: 100%; }
 
@@ -204,7 +203,8 @@ main {
 .card {
   flex: 0 0 200px;
   display: inline-block;
-  color: #0f1115; }
+  color: #0f1115;
+  height: 303px; }
 
 .card:nth-of-type(n + 2) {
   margin-left: 10px; }
@@ -228,10 +228,10 @@ main {
   padding-top: 1.15em;
   padding-left: 1.15em;
   padding-right: 1.15em;
-  padding-bottom: 0.1em; }
+  padding-bottom: 0.4em; }
 
-li {
-  list-style: none; }
+.sidebars {
+  font: Segoe UI; }
 
 .sidebar-left {
   grid-column: 1/2;

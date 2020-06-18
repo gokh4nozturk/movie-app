@@ -16,7 +16,7 @@ function SidebarLeft() {
   };
 
   return (
-    <div>
+    <div className="sidebars">
       <h3>Genres</h3>
       {genres.map((item) => (
         <Link to={item.id} key={item.id} className="genres-links">

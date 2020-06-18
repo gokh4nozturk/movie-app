@@ -1,5 +1,4 @@
-/* home/main part */
-
+@import "../abstracts/variables";
 main {
   width: 100%;
 }
@@ -41,6 +40,7 @@ main {
   flex: 0 0 200px;
   display: inline-block;
   color: #0f1115;
+  height: 303px;
 }
 
 .card:nth-of-type(n + 2) {
@@ -67,5 +67,5 @@ main {
   padding-top: 1.15em;
   padding-left: 1.15em;
   padding-right: 1.15em;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.4em;
 }

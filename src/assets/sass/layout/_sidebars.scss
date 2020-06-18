@@ -1,6 +1,9 @@
-li {
-  list-style: none;
+@import "../abstracts/variables";
+
+.sidebars {
+  font: $font-stack;
 }
+
 .sidebar-left {
   grid-column: 1/2;
   display: flex;
@@ -8,7 +11,7 @@ li {
   justify-content: center;
 }
 .sidebar-right {
-  background-color: #1d1c24;
+  background-color: $thirty-color;
   width: 25%;
   padding: 2%;
 }
