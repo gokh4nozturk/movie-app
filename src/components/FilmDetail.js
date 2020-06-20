@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 import SidebarLeft from "./SidebarLeft";
+import { useHistory } from "react-router-dom";
 
 function FilmDetail({ match }) {
   const [film, setFilm] = useState({});
@@ -13,6 +14,8 @@ function FilmDetail({ match }) {
   useEffect(() => {
     fetchFilm();
   }, []);
+
+  const { goBack } = useHistory();
 
   const fetchFilm = async () => {
     const data = await Axios.get(
@@ -65,7 +68,12 @@ function FilmDetail({ match }) {
                   </p>
                 </div>
                 <div className="card-body-low">
-                  <button className="btn btn-primary btn-block">Watch</button>
+                  <button
+                    className="btn btn-primary btn-block"
+                    onClick={goBack}
+                  >
+                    Go Home
+                  </button>
                 </div>
               </div>
             </div>
