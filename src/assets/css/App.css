@@ -116,7 +116,7 @@ main {
   align-items: center; }
   .film-detail .card-container {
     width: 1200px;
-    height: 800px;
+    height: 750px;
     filter: blur(3px);
     background-position: center;
     background-repeat: no-repeat;
