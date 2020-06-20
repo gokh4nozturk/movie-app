@@ -34,8 +34,10 @@
 
 .nav-links {
   text-decoration: none;
-  color: #707070;
-  margin-left: 10px; }
+  color: #707070; }
+
+.nav-links:nth-child(3) {
+  margin-right: 2em; }
 
 .nav-links:hover {
   color: white; }
@@ -108,17 +110,41 @@ main {
 .film-detail {
   background-color: #1d1c24;
   border-radius: 10px;
-  padding: 20px; }
-  .film-detail .film-detail-card {
-    display: flex; }
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+  .film-detail .card-container {
+    width: 1200px;
+    height: 800px;
+    filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
   .film-detail .card {
-    max-width: 700px; }
-  .film-detail .card-text {
-    color: black; }
-  .film-detail .film-detail-img {
-    width: 20rem; }
-  .film-detail .card-body {
-    width: 25rem; }
+    position: absolute;
+    top: 72%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    max-width: 900px;
+    height: 600px; }
+    .film-detail .card .card-img {
+      height: 598px;
+      width: 20rem; }
+    .film-detail .card .card-body {
+      height: 600px;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .film-detail .card .card-body .card-body-up .card-title {
+        text-decoration: underline; }
+      .film-detail .card .card-body .card-body-up .text {
+        color: black; }
+      .film-detail .card .card-body .card-body-up .genres {
+        display: inline; }
 
 .sidebars {
   font: Segoe UI; }

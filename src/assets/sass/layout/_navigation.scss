@@ -36,7 +36,9 @@
 .nav-links {
   text-decoration: none;
   color: #707070;
-  margin-left: 10px;
+}
+.nav-links:nth-child(3) {
+  margin-right: 2em;
 }
 
 .nav-links:hover {

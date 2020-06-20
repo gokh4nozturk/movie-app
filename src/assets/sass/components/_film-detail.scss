@@ -2,20 +2,52 @@
   background-color: $thirty-color;
   border-radius: 10px;
   padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 
-  .film-detail-card {
-    display: flex;
+  .card-container {
+    width: 1200px;
+    height: 800px;
+    filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .card {
-    max-width: 700px;
-  }
-  .card-text {
-    color: black;
-  }
-  .film-detail-img {
-    width: 20rem;
-  }
-  .card-body {
-    width: 25rem;
+    position: absolute;
+    top: 72%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    max-width: 900px;
+    height: 600px;
+
+    .card-img {
+      height: 598px;
+      width: 20rem;
+    }
+    .card-body {
+      height: 600px;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card-body-up {
+        .card-title {
+          text-decoration: underline;
+        }
+        .text {
+          color: black;
+        }
+        .genres {
+          display: inline;
+        }
+      }
+      .card-body-low {
+      }
+    }
   }
 }
