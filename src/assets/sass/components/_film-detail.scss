@@ -2,5 +2,20 @@
   background-color: $thirty-color;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: inset 0px -2px 2px 8px rgba(90, 16, 16, 0.75);
+
+  .film-detail-card {
+    display: flex;
+  }
+  .card {
+    max-width: 700px;
+  }
+  .card-text {
+    color: black;
+  }
+  .film-detail-img {
+    width: 20rem;
+  }
+  .card-body {
+    width: 25rem;
+  }
 }

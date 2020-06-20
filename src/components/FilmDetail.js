@@ -26,21 +26,21 @@ function FilmDetail({ match }) {
       <div className="sidebar-left">
         <SidebarLeft />
       </div>
-      <div className="view">
-        <div className="film-detail">
-          <h1 className="film-detail-title">{film.title}</h1>
-          <p className="film-detail-overview">Overivew : {film.overview}</p>
-          <div className="card">
-            <img
-              className="film-detail-img"
-              alt="..."
-              src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-            ></img>
+      <div className="film-detail">
+        <div className="card">
+          <div className="film-detail-card">
+            <div className="film-detail-img">
+              <img
+                className="card-img"
+                alt="..."
+                src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+              ></img>
+            </div>
+            <div className="card-body">
+              <p className="card-text">Overivew : {film.overview}</p>
+            </div>
           </div>
         </div>
-        <button className="btn btn-primary" onClick={goBack}>
-          Go Back
-        </button>
       </div>
     </div>
   );
