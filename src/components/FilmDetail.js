@@ -7,12 +7,14 @@ import { useHistory } from "react-router-dom";
 function FilmDetail({ match }) {
   const [film, setFilm] = useState({});
   const [genres, setGenres] = useState([]);
+  const [video, setVideo] = useState([]);
 
   let hour = Math.floor(film.runtime / 60);
   let minutes = film.runtime % 60;
 
   useEffect(() => {
     fetchFilm();
+    fetchVideo();
   }, []);
 
   const { goBack } = useHistory();
@@ -21,10 +23,16 @@ function FilmDetail({ match }) {
     const data = await Axios.get(
       `https://api.themoviedb.org/3/movie/${match.params.id}?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US`
     ).then((res) => res.data);
-    console.log(data);
-
     setFilm(data);
     setGenres(data.genres);
+  };
+
+  const fetchVideo = async () => {
+    const data = await Axios.get(
+      `https://api.themoviedb.org/3/movie/${match.params.id}/videos?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US`
+    ).then((res) => res.data);
+    setVideo(data.results);
+    console.log(data.results);
   };
 
   return (
@@ -68,6 +76,13 @@ function FilmDetail({ match }) {
                   </p>
                 </div>
                 <div className="card-body-low">
+                  <iframe
+                    src=""
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                    title="video"
+                  />
                   <button
                     className="btn btn-primary btn-block"
                     onClick={goBack}
