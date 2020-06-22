@@ -1,38 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Axios from "axios";
 
 import SidebarLeft from "./SidebarLeft";
 import { useHistory } from "react-router-dom";
 
 function FilmDetail({ match }) {
+  const { goBack } = useHistory();
   const [film, setFilm] = useState({});
-  const [genres, setGenres] = useState([]);
   const [video, setVideo] = useState({});
 
-  let hour = Math.floor(film.runtime / 60);
-  let minutes = film.runtime % 60;
+  let hour = film ? Math.floor(film.runtime / 60) : "";
+  let minutes = film ? film.runtime % 60 : "";
 
-  useEffect(() => {
-    fetchFilm();
-    fetchVideo();
-  });
-
-  const { goBack } = useHistory();
-
-  const fetchFilm = async () => {
+  const fetchFilm = useCallback(async () => {
     const data = await Axios.get(
       `https://api.themoviedb.org/3/movie/${match.params.id}?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US`
     ).then((res) => res.data);
     setFilm(data);
-    setGenres(data.genres);
-  };
+  }, [match]);
 
-  const fetchVideo = async () => {
+  const fetchVideo = useCallback(async () => {
     const data = await Axios.get(
       `https://api.themoviedb.org/3/movie/${match.params.id}/videos?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US`
     ).then((res) => res.data);
     setVideo(data.results[0]);
-  };
+  }, [match]);
+
+  useEffect(() => {
+    fetchFilm();
+    fetchVideo();
+  }, [fetchFilm, fetchVideo]);
 
   return (
     <div className="home-main">
@@ -59,7 +56,7 @@ function FilmDetail({ match }) {
               <div className="card-body">
                 <div className="card-body-up">
                   <h5 className="card-title">{`${film.title}/${film.original_title}`}</h5>
-                  {genres.map((item) => (
+                  {film.genres.map((item) => (
                     <p key={item.id} className="text genres">
                       {item.name}/
                     </p>
