@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 function FilmDetail({ match }) {
   const [film, setFilm] = useState({});
   const [genres, setGenres] = useState([]);
-  const [video, setVideo] = useState([]);
+  const [video, setVideo] = useState({});
 
   let hour = Math.floor(film.runtime / 60);
   let minutes = film.runtime % 60;
@@ -31,8 +31,7 @@ function FilmDetail({ match }) {
     const data = await Axios.get(
       `https://api.themoviedb.org/3/movie/${match.params.id}/videos?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US`
     ).then((res) => res.data);
-    setVideo(data.results);
-    console.log(data.results);
+    setVideo(data.results[0]);
   };
 
   return (
@@ -77,12 +76,16 @@ function FilmDetail({ match }) {
                 </div>
                 <div className="card-body-low">
                   <iframe
-                    src=""
+                    key={video.id}
+                    title={video.name}
+                    width="540"
+                    height="230"
+                    src={`https://www.youtube.com/embed/${video.key}`}
                     frameBorder="0"
-                    allow="autoplay; encrypted-media"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    title="video"
-                  />
+                  ></iframe>
+
                   <button
                     className="btn btn-primary btn-block"
                     onClick={goBack}

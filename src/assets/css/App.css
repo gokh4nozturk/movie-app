@@ -142,7 +142,9 @@ main {
       .film-detail .card .card-body .card-body-up .card-title {
         text-decoration: underline; }
       .film-detail .card .card-body .card-body-up .text {
-        color: black; }
+        height: 100px;
+        color: black;
+        overflow-y: scroll; }
       .film-detail .card .card-body .card-body-up .genres {
         display: inline; }
 

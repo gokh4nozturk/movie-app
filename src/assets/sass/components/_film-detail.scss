@@ -40,7 +40,9 @@
           text-decoration: underline;
         }
         .text {
+          height: 100px;
           color: black;
+          overflow-y: scroll;
         }
         .genres {
           display: inline;
