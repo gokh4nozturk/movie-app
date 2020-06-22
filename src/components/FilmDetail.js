@@ -15,7 +15,7 @@ function FilmDetail({ match }) {
   useEffect(() => {
     fetchFilm();
     fetchVideo();
-  }, []);
+  });
 
   const { goBack } = useHistory();
 
