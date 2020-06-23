@@ -20,9 +20,9 @@ function SidebarLeft() {
   return (
     <div className="sidebars">
       <h3 className="titles">Genres</h3>
-      {genres.map((itemm) => (
-        <Link to={`/genre/${itemm.id}`} key={itemm.id} className="genres-links">
-          <p>{itemm.name}</p>
+      {genres.map((item) => (
+        <Link to={`/genre/${item.id}`} key={item.id} className="genres-links">
+          <p>{item.name}</p>
         </Link>
       ))}
     </div>
