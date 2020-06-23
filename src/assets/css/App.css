@@ -22,15 +22,26 @@
   align-items: center;
   font-size: 30px; }
 
-.searchBox {
-  background: #19181f;
-  color: white;
-  width: 60%;
-  height: 60px;
-  font-size: 25px;
-  border: 0px;
-  padding: 30px;
-  border-radius: 30px; }
+.searchBox-container {
+  width: 60%; }
+  .searchBox-container .searchBox {
+    background: #19181f;
+    color: white;
+    width: 85%;
+    height: 60px;
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 30px; }
+  .searchBox-container .searchBtn {
+    width: 14%;
+    margin-left: 1%;
+    background: #19181f;
+    color: white;
+    height: 65px;
+    font-size: 25px;
+    border-radius: 30px; }
+  .searchBox-container .searchBtn:hover {
+    color: #caca2e; }
 
 .nav-links {
   text-decoration: none;

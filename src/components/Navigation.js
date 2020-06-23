@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "./icons/index";
+import SearchBox from "./SearchBox";
 
 function Navigation() {
   return (
@@ -11,12 +12,7 @@ function Navigation() {
         </Link>
       </div>
       <div className="part2">
-        <input
-          autoFocus
-          type="text"
-          className="searchBox"
-          placeholder="Search any movies or tv shows"
-        ></input>
+        <SearchBox />
         <Link to="/" className="nav-links">
           <h3>Movies</h3>
         </Link>

@@ -23,15 +23,29 @@
   align-items: center;
   font-size: 30px;
 }
-.searchBox {
-  background: $secondary-color;
-  color: white;
+.searchBox-container {
   width: 60%;
-  height: 60px;
-  font-size: 25px;
-  border: 0px;
-  padding: 30px;
-  border-radius: 30px;
+  .searchBox {
+    background: $secondary-color;
+    color: white;
+    width: 85%;
+    height: 60px;
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 30px;
+  }
+  .searchBtn {
+    width: 14%;
+    margin-left: 1%;
+    background: $secondary-color;
+    color: white;
+    height: 65px;
+    font-size: 25px;
+    border-radius: 30px;
+  }
+  .searchBtn:hover {
+    color: rgb(202, 202, 46);
+  }
 }
 .nav-links {
   text-decoration: none;
