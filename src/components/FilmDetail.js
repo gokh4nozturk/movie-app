@@ -19,6 +19,7 @@ function FilmDetail({ match }) {
     ).then((res) => res.data);
     setFilm(data);
     setGenres(data.genres);
+    console.log(data);
   }, [match]);
 
   const fetchVideo = useCallback(async () => {

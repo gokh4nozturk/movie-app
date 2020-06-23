@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import SearchResults from "./SearchResuts";
 
 function SearchBox() {
   const [searchKey, setSearchKey] = useState([]);
-
-  const Searcher = () => {};
 
   return (
     <div className="searchBox-container">
@@ -17,12 +17,7 @@ function SearchBox() {
           setSearchKey(e.currentTarget.value);
         }}
       />
-      <button
-        className="searchBtn"
-        type="button"
-        id="button-add"
-        onClick={Searcher()}
-      >
+      <button className="searchBtn" type="button" id="button-add">
         Ara
       </button>
     </div>

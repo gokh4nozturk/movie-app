@@ -7,6 +7,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import FilmDetail from "./components/FilmDetail";
 import FilmFromGenre from "./components/FilmFromGenre";
+import SearchResults from "./components/SearchResuts";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/film/:id" component={FilmDetail} />
         <Route path="/genre/:id" component={FilmFromGenre} />
+        <Route path="/search/:searchKey" component={SearchResults} />
       </Switch>
       <Footer />
     </Router>
