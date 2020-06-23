@@ -8,6 +8,7 @@ function FilmDetail({ match }) {
   const { goBack } = useHistory();
   const [film, setFilm] = useState({});
   const [video, setVideo] = useState({});
+  const [genres, setGenres] = useState([]);
 
   let hour = film ? Math.floor(film.runtime / 60) : "";
   let minutes = film ? film.runtime % 60 : "";
@@ -17,6 +18,7 @@ function FilmDetail({ match }) {
       `https://api.themoviedb.org/3/movie/${match.params.id}?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US`
     ).then((res) => res.data);
     setFilm(data);
+    setGenres(data.genres);
   }, [match]);
 
   const fetchVideo = useCallback(async () => {
@@ -56,7 +58,7 @@ function FilmDetail({ match }) {
               <div className="card-body">
                 <div className="card-body-up">
                   <h5 className="card-title">{`${film.title}/${film.original_title}`}</h5>
-                  {film.genres.map((item) => (
+                  {genres.map((item) => (
                     <p key={item.id} className="text genres">
                       {item.name}/
                     </p>
