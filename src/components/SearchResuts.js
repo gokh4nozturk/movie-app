@@ -11,7 +11,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [searchKey]);
 
   const fetchData = async () => {
     const data = await Axios.get(

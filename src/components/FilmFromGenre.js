@@ -10,7 +10,8 @@ function FilmFromGenre({ match }) {
 
   useEffect(() => {
     fetchFromGenres();
-  }, []);
+    console.log(match);
+  }, [match]);
 
   const fetchFromGenres = async () => {
     const data = await Axios.get(
@@ -25,6 +26,7 @@ function FilmFromGenre({ match }) {
         <SidebarLeft />
       </div>
       <div className="view">
+        <h2>{match.params.name}</h2>
         <div className="view-from-genres">
           {data.map((item) => (
             <Film key={item.id} {...item} />

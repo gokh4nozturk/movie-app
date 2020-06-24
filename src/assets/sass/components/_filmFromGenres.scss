@@ -1,0 +1,8 @@
+.view-from-genres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card {
+    margin: 1%;
+  }
+}

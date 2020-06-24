@@ -171,6 +171,13 @@ main {
   padding-top: 101em;
   padding-left: 28em; }
 
+.view-from-genres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .view-from-genres .card {
+    margin: 1%; }
+
 .sidebars {
   font: Segoe UI; }
 
