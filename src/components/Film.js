@@ -7,7 +7,9 @@ function Film(item) {
       <div className="card">
         <img
           alt="..."
-          src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w200${
+            item.poster_path ? item.poster_path : item.logo_path
+          }`}
         />
         <div className="card-img-text">
           <p className="card-text">{item.title}</p>

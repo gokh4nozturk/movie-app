@@ -18,7 +18,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/film/:id" component={FilmDetail} />
         <Route path="/genre/:id" component={FilmFromGenre} />
-        <Route path="/search/:searchKey" component={SearchResults} />
+        <Route path="/search/:searchKey" children={<SearchResults />} />
       </Switch>
       <Footer />
     </Router>
