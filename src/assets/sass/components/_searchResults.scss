@@ -1,14 +1,6 @@
 .view-results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: block;
   .card {
     margin: 1%;
   }
-}
-
-.page-control {
-  position: absolute;
-  padding-top: 101em;
-  padding-left: 28em;
 }

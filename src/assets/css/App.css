@@ -160,23 +160,22 @@ main {
         display: inline; }
 
 .view-results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  display: block; }
   .view-results .card {
     margin: 1%; }
 
-.page-control {
-  position: absolute;
-  padding-top: 101em;
-  padding-left: 28em; }
-
 .view-from-genres {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  display: block; }
   .view-from-genres .card {
     margin: 1%; }
+
+.page-changer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+  margin-left: 40%;
+  margin-right: 40%; }
 
 .sidebars {
   font: Segoe UI; }

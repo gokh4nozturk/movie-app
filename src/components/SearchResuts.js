@@ -3,19 +3,24 @@ import { useParams } from "react-router-dom";
 import Axios from "axios";
 import SidebarLeft from "./SidebarLeft";
 import Film from "./Film";
+import PageChanger from "./PageChanger";
 
 const SearchResults = () => {
   let { searchKey } = useParams();
   const [searched, setSearched] = useState([]);
-  const [page, setPage] = useState();
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
     fetchData();
-  }, [searchKey]);
+  }, [searchKey, page]);
+
+  useEffect(() => {
+    setPage(1);
+  }, []);
 
   const fetchData = async () => {
     const data = await Axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US&query=${searchKey}&page=1&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=8ebecc9f6798ef3e2aa77ea37765848b&language=en-US&query=${searchKey}&page=${page}&include_adult=false`
     ).then((res) => res.data);
     console.log(data);
     setSearched(data.results);
@@ -32,8 +37,8 @@ const SearchResults = () => {
           {searched.length !== 0
             ? searched.map((item) => <Film key={item.id} {...item} />)
             : "not okay"}
+          <PageChanger page={page} setPage={setPage} />
         </div>
-        <div className="page-control">{page}</div>
       </div>
     </main>
   );
