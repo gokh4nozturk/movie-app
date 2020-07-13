@@ -3,6 +3,7 @@ import Axios from "axios";
 
 import SidebarLeft from "./SidebarLeft";
 import { useHistory } from "react-router-dom";
+import Navigation from "./Navigation";
 
 function FilmDetail({ match }) {
   const { goBack } = useHistory();
@@ -35,70 +36,73 @@ function FilmDetail({ match }) {
   }, [fetchFilm, fetchVideo]);
 
   return (
-    <div className="home-main">
-      <div className="sidebar-left">
-        <SidebarLeft />
-      </div>
-      <div className="film-detail">
-        <div
-          className="card-container"
-          style={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/w500${film.backdrop_path})`,
-          }}
-        ></div>
-        <div className="card mb-3">
-          <div className="row no-gutters">
-            <div className="col-md-4">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                className="card-img"
-                alt="..."
-              />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <div className="card-body-up">
-                  <h5 className="card-title">{`${film.title}/${film.original_title}`}</h5>
-                  {genres.map((item) => (
-                    <p key={item.id} className="text genres">
-                      {item.name}/
+    <>
+      <Navigation />
+      <div className="home-main">
+        <div className="sidebar-left">
+          <SidebarLeft />
+        </div>
+        <div className="film-detail">
+          <div
+            className="card-container"
+            style={{
+              backgroundImage: `url(https://image.tmdb.org/t/p/w500${film.backdrop_path})`,
+            }}
+          ></div>
+          <div className="card mb-3">
+            <div className="row no-gutters">
+              <div className="col-md-4">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+                  className="card-img"
+                  alt="..."
+                />
+              </div>
+              <div className="col-md-8">
+                <div className="card-body">
+                  <div className="card-body-up">
+                    <h5 className="card-title">{`${film.title}/${film.original_title}`}</h5>
+                    {genres.map((item) => (
+                      <p key={item.id} className="text genres">
+                        {item.name}/
+                      </p>
+                    ))}
+                    <p>{`${hour}h ${minutes}min`}</p>
+                    <p className="text">{film.overview}</p>
+
+                    <hr />
+                    <p className="card-text">
+                      <small className="text-muted">
+                        Release date : {film.release_date}
+                      </small>
                     </p>
-                  ))}
-                  <p>{`${hour}h ${minutes}min`}</p>
-                  <p className="text">{film.overview}</p>
+                  </div>
+                  <div className="card-body-low">
+                    <iframe
+                      key={video.id}
+                      title={video.name}
+                      width="540"
+                      height="230"
+                      src={`https://www.youtube.com/embed/${video.key}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
 
-                  <hr />
-                  <p className="card-text">
-                    <small className="text-muted">
-                      Release date : {film.release_date}
-                    </small>
-                  </p>
-                </div>
-                <div className="card-body-low">
-                  <iframe
-                    key={video.id}
-                    title={video.name}
-                    width="540"
-                    height="230"
-                    src={`https://www.youtube.com/embed/${video.key}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-
-                  <button
-                    className="btn btn-primary btn-block"
-                    onClick={goBack}
-                  >
-                    Go Home
-                  </button>
+                    <button
+                      className="btn btn-primary btn-block"
+                      onClick={goBack}
+                    >
+                      Go Home
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 export default FilmDetail;

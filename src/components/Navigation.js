@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { Logo } from "./icons/index";
 import SearchBox from "./SearchBox";

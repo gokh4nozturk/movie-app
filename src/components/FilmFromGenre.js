@@ -5,6 +5,7 @@ import Axios from "axios";
 import SidebarLeft from "./SidebarLeft";
 import Film from "./Film";
 import PageChanger from "./PageChanger";
+import Navigation from "./Navigation";
 
 function FilmFromGenre({ match }) {
   const [data, setData] = useState([]);
@@ -26,20 +27,23 @@ function FilmFromGenre({ match }) {
   };
 
   return (
-    <div className="home-main">
-      <div className="sidebar-left">
-        <SidebarLeft />
-      </div>
-      <div className="view">
-        <h2>{match.params.name}</h2>
-        <div className="view-from-genres">
-          {data.map((item) => (
-            <Film key={item.id} {...item} />
-          ))}
-          <PageChanger page={page} setPage={setPage} />
+    <>
+      <Navigation />
+      <div className="home-main">
+        <div className="sidebar-left">
+          <SidebarLeft />
+        </div>
+        <div className="view">
+          <h2>{match.params.name}</h2>
+          <div className="view-from-genres">
+            {data.map((item) => (
+              <Film key={item.id} {...item} />
+            ))}
+            <PageChanger page={page} setPage={setPage} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
