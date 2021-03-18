@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react'
 
-import Style from "../assets/css/App.css";
+import Style from '../assets/css/App.css'
 
 function Footer() {
   return (
     <footer style={Style} className="bg-warning">
-      Footer
+      Footer Footer
     </footer>
-  );
+  )
 }
-export default Footer;
+export default Footer
